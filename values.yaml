@@ -1,0 +1,21 @@
+appName: redis:v1
+
+namespace: 25996-redis
+
+replicaCount: 1
+
+image:
+  repository: redis
+  tag: 6.2.6
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 6379
+
+resources: {}
+configmap:
+  name: redis-configmap
+  data:
+    maxmemory-policy: "allkeys-lru"
+    maxmemory: "2mb"
