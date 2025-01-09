@@ -1,4 +1,4 @@
-appName: redis:v1
+appName: redis
 
 namespace: 25996-redis
 
@@ -17,5 +17,5 @@ resources: {}
 configmap:
   name: redis-configmap
   data:
-    maxmemory-policy: "allkeys-lru"
+    maxmemory_policy: "allkeys-lru"
     maxmemory: "2mb"
