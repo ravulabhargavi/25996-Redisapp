@@ -4,5 +4,5 @@ metadata:
   name: {{ .Values.configmap.name }}
   namespace: {{ .Values.namespace }}
 data:
-  maxmemory_policy: '{{ .Values.configmap.data.maxmemory-policy }}'
-  maxmemory: '{{ .Values.configmap.data.maxmemory }}'
+  maxmemory_policy: "{{ .Values.configmap.data.maxmemory_policy }}"
+  maxmemory: "{{ .Values.configmap.data.maxmemory }}"
